@@ -90,6 +90,22 @@ void List::remove(int k)
 	delete delPtr;
 	num_elements--;
 	}
-	
+
+Node* List::get(int k)
+{
+	Node* myPtr=frontPtr;
+	if(k==1)
+	{
+		return frontPtr;
+	}
+	else
+	{
+		while(loc!=k)
+		{
+			myPtr=myPtr->link;
+		}
+		return myPtr;
+	}
+}	
 	//Implementations of missing operations
 	
